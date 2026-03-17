@@ -11,6 +11,7 @@
 */
 
 .page {
+  padding-block: 100px;
   font-family: var(--main-font-family), sans-serif;
   font-size: var(--main-font-size), 18px;
   line-height: var(--main-line-height), 117%;
@@ -21,4 +22,33 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-font-weight);
+}
+
+.section {
+  margin-inline: auto;
+  outline: var(--border);
+  outline-offset: -2px;
+  background-color: #fff;
+  inline-size: var(--section-width);
+}
+
+.header {
+  margin-block-end: 98px;
+  padding-block: var(--header-padding);
+  outline-offset: 0;
+  font-family: var(--accent-font-family), sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.logo {
+  display: block;
+  margin-block-end: 20px;
+  font-weight: var(--regular-font-weight);
+  font-size: var(--logo-font-size);
+}
+
+.headline {
+  font-weight: var(--regular-font-weight);
+  font-size: var(--headline-font-size);
 }
