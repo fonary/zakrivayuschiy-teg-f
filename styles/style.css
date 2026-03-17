@@ -63,6 +63,13 @@
   font-size: var(--headline-font-size);
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-block-end: 50px;
+}
+
 .card__title {
   padding-inline: 12px;
   padding-block-start: 7px;
