@@ -156,3 +156,56 @@
   padding-block-start: 12.5px;
   padding-block-end: 12.5px;
 }
+
+.button-save {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline: auto;
+  padding: 16px 20px;
+}
+
+.button-save svg {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.dialog {
+  display: none;
+}
+
+.dialog[open] {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content min-content;
+  row-gap: 30px;
+  column-gap: 20px;
+  padding: 30px;
+}
+
+.dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dialog svg {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog__info {
+  display: block;
+  padding-inline-end: 30px;
+  font-family: var(--accent-font-family);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: start;
+}
+
+.dialog .button {
+  padding: 16px 20px;
+  grid-column: 1 / -1;
+  text-transform: uppercase;
+}
