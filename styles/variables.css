@@ -6,4 +6,10 @@
   --main-line-height: 116%;
   --regular-font-weight: 410;
   --bold-font-weight: 715;
+/* Фон */
+  --background-gradient: 
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
+  --page-background: var(--background-gradient);
 }
