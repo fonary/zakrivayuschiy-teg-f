@@ -72,12 +72,43 @@
   line-height: 122%;
 }
 
+.figure {
+  position: relative;
+  margin: 0;
+}
+
 .card__image {
   display: block;
   margin-inline: auto;
   border-block: var(--border);
   object-fit: cover;
   inline-size: calc(100% - 4px);
+}
+
+.watermark {
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  text-shadow:
+    1px 0 var(--text-stroke-color),
+    0 1px var(--text-stroke-color),
+    -1px 0 var(--text-stroke-color),
+    0 -1px var(--text-stroke-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--text-stroke-color)) or
+    (-webkit-text-stroke: 1px var(--text-stroke-color))
+) {
+  .watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-stroke: 1px var(--text-stroke-color);
+  }
 }
 
 .card__content {

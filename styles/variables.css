@@ -8,6 +8,7 @@
   --bold-font-weight: 715;
   --logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --headline-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --text-stroke-color: rgba(255, 255, 255, 0.5);
 /* Фон */
   --background-gradient: 
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
