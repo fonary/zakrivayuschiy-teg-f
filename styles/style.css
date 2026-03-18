@@ -94,6 +94,34 @@
   inline-size: calc(100% - 4px);
 }
 
+.image-brightness{
+  filter: brightness(200%);
+}
+
+.image-contrast {
+  filter: contrast(50%);
+}
+
+.image-opacity {
+  filter: opacity(0.5);
+}
+
+.image-grayscale {
+  filter: grayscale(0.6);
+}
+
+.image-saturate {
+  filter: saturate(200%);
+}
+
+.image-sepia {
+  filter: sepia(120%);
+}
+
+.image-multiple-filter {
+  filter: brightness(120%) sepia(140%) saturate(150%);
+}
+
 .watermark {
   position: absolute;
   top: 29px;
