@@ -33,13 +33,37 @@
 }
 
 .button {
-  border: none;
-  outline: var(--border);
-  outline-offset: -2px;
+  position: relative;
+  border: var(--border);
   font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 13px;
   background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left center;
+  transform: scaleX(0);
+  mix-blend-mode: difference;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 #000;
+  transition: box-shadow 0.3s ease;
 }
 
 .header {
@@ -94,7 +118,7 @@
   inline-size: calc(100% - 4px);
 }
 
-.image-brightness{
+.image-brightness {
   filter: brightness(200%);
 }
 
@@ -172,6 +196,8 @@
 }
 
 .card__icon-button {
+  border: none;
+  background-color: #fff;
   inline-size: 38px;
   block-size: 38px;
 }
@@ -182,9 +208,8 @@
 }
 
 .card__like-button {
-  padding-inline: 37px;
-  padding-block-start: 12.5px;
-  padding-block-end: 12.5px;
+  padding-inline: 35px;
+  padding-block: 10px;
 }
 
 .button-save {
@@ -192,7 +217,7 @@
   align-items: center;
   gap: 8px;
   margin-inline: auto;
-  padding: 16px 20px;
+  padding: 14px 18px;
 }
 
 .button-save svg {
@@ -205,8 +230,6 @@
 }
 
 .dialog[open] {
-  border: none;
-  outline: var(--border);
   position: fixed;
   inset: 0;
   display: grid;
@@ -239,7 +262,7 @@
 
 .dialog .button {
   grid-column: 1 / -1;
-  padding: 16px 20px;
+  padding: 10px 20px;
   text-transform: uppercase;
 }
 
@@ -270,7 +293,7 @@
   }
 
   .button-save {
-    padding: 20px;
+    padding: 18px;
   }
 
   .button-save svg {
