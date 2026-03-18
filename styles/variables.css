@@ -23,6 +23,6 @@
   --header-padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
   --border: 2px solid var(--accent-color);
 /* Цвета иконки */
-  --contour-color: #000;
+  --contour-color: var(--accent-color);
   --animation-fill-color: #f00;
 }
