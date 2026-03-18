@@ -22,4 +22,7 @@
   --section-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --header-padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
   --border: 2px solid var(--accent-color);
+/* Цвета иконки */
+  --contour-color: #000;
+  --animation-fill-color: #f00;
 }

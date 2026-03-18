@@ -198,6 +198,7 @@
 }
 
 .card__icon-button {
+  padding: 0;
   border: none;
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -216,13 +217,22 @@
 }
 
 .card__icon-button svg {
-  inline-size: 27px;
-  block-size: 24px;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .card__like-button {
   padding-inline: 35px;
   padding-block: 10.5px;
+}
+
+.card__icon-button .main-body,
+.card__icon-button .core {
+  fill: transparent;
+}
+
+.card__icon-button .sparks {
+  opacity: 0;
 }
 
 .button-save {
