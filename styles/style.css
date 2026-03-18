@@ -13,8 +13,8 @@
 .page {
   padding-block: 100px;
   font-family: var(--main-font-family), sans-serif;
-  font-size: var(--main-font-size), 18px;
-  line-height: var(--main-line-height), 117%;
+  font-size: var(--main-font-size, 18px);
+  line-height: var(--main-line-height, 117%);
   background-color: #fff;
   background-image: var(--page-background);
   background-size: cover;
@@ -56,11 +56,13 @@
   margin-block-end: 20px;
   font-weight: var(--regular-font-weight);
   font-size: var(--logo-font-size);
+  line-height: 100%;
 }
 
 .headline {
   font-weight: var(--regular-font-weight);
   font-size: var(--headline-font-size);
+  line-height: 100%;
 }
 
 .list {
@@ -108,8 +110,8 @@
 }
 
 @supports (
-  (text-stroke: 1px var(--text-stroke-color)) or
-    (-webkit-text-stroke: 1px var(--text-stroke-color))
+  (text-stroke: 1px rgba(255, 255, 255, 0.5)) or
+    (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5))
 ) {
   .watermark {
     text-shadow: none;
@@ -175,13 +177,16 @@
 }
 
 .dialog[open] {
+  border: none;
+  outline: var(--border);
   position: fixed;
   inset: 0;
   display: grid;
-  align-items: center;
   grid-template-columns: min-content min-content;
+  align-items: center;
   row-gap: 30px;
   column-gap: 20px;
+  max-width: 100%;
   padding: 30px;
 }
 
@@ -198,14 +203,50 @@
   display: block;
   padding-inline-end: 30px;
   font-family: var(--accent-font-family);
-  text-transform: uppercase;
   font-size: 14px;
   line-height: 150%;
   text-align: start;
+  text-transform: uppercase;
 }
 
 .dialog .button {
-  padding: 16px 20px;
   grid-column: 1 / -1;
+  padding: 16px 20px;
   text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+  .header {
+    margin-block-end: 100px;
+    outline-offset: -2px;
+  }
+
+  .card__title {
+    padding-block-end: 2px;
+  }
+
+  .card__content {
+    padding-block: 26px;
+  }
+
+  .button-save {
+    flex-direction: column;
+  }
+
+  .dialog[open] {
+    padding-inline: 40px;
+  }
+
+  .dialog__info {
+    padding-inline-end: 0;
+  }
+
+  .button-save {
+    padding: 20px;
+  }
+
+  .button-save svg {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
