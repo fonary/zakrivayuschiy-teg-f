@@ -216,11 +216,6 @@
   outline-color: var(--accent-color);
 }
 
-.like-icon {
-  inline-size: 39px;
-  block-size: 36px;
-}
-
 .card__icon-button .contour {
   transition: fill 0.1s linear;
 }
@@ -244,6 +239,8 @@
 
 .like-icon {
   transform-origin: center;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .like-icon:hover .core {
@@ -292,8 +289,8 @@
 }
 
 .card__like-button {
-  inline-size: 130px;
   padding-block: 10.5px;
+  inline-size: 130px;
 }
 
 .button-save {
@@ -364,10 +361,6 @@
     padding-block: 26px;
   }
 
-  .button-save {
-    flex-direction: column;
-  }
-
   .dialog[open] {
     padding-inline: 40px;
   }
@@ -377,6 +370,7 @@
   }
 
   .button-save {
+    flex-direction: column;
     padding: 18px;
   }
 
