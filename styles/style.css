@@ -12,10 +12,11 @@
 
 .page {
   padding-block: 100px;
+  color: var(--text-color);
   font-family: var(--main-font-family), sans-serif;
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-line-height, 117%);
-  background-color: #fff;
+  background-color: var(--bg-color);
   background-image: var(--page-background);
   background-size: cover;
   background-attachment: fixed;
@@ -28,7 +29,7 @@
   margin-inline: auto;
   outline: var(--border);
   outline-offset: -2px;
-  background-color: #fff;
+  background-color: var(--bg-color);
   inline-size: var(--section-width);
 }
 
@@ -38,7 +39,7 @@
   font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 13px;
-  background-color: #fff;
+  background-color: var(--bg-color);
   transition: box-shadow 0.3s ease;
 }
 
@@ -46,10 +47,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #fff;
+  background-color: var(--bg-color);
   transition: transform 0.5s ease-in-out;
-  transform-origin: left center;
   transform: scaleX(0);
+  transform-origin: left center;
+  isolation: isolate;
   mix-blend-mode: difference;
 }
 
@@ -62,7 +64,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 0 #000;
+  box-shadow: 2px 2px 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
 
@@ -197,9 +199,20 @@
 
 .card__icon-button {
   border: none;
-  background-color: #fff;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  background-color: var(--bg-color);
   inline-size: 38px;
   block-size: 38px;
+  transition: outline-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline-color: transparent;
+}
+
+.card__icon-button:focus-visible {
+  outline-color: var(--accent-color);
 }
 
 .card__icon-button svg {
@@ -209,7 +222,7 @@
 
 .card__like-button {
   padding-inline: 35px;
-  padding-block: 10px;
+  padding-block: 10.5px;
 }
 
 .button-save {
