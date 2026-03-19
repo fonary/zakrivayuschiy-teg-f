@@ -67,7 +67,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .header {
@@ -103,7 +102,7 @@
 .card__title {
   padding-inline: 12px;
   padding-block-start: 7px;
-  padding-block-end: 1px;
+  padding-block-end: 3px;
   font-size: 18px;
   line-height: 122%;
   font-variation-settings: "wght" var(--bold-font-weight);
@@ -117,9 +116,10 @@
 .card__image {
   display: block;
   margin-inline: auto;
-  border-block: var(--border);
+  border: var(--border);
   object-fit: cover;
-  inline-size: calc(100% - 4px);
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .image-brightness {
@@ -152,7 +152,7 @@
 
 .watermark {
   position: absolute;
-  top: 29px;
+  top: 25px;
   right: 27px;
   color: rgba(0, 0, 0, 0.5);
   font-family: var(--accent-font-family), sans-serif;
@@ -181,8 +181,8 @@
   flex-direction: column;
   gap: 25px;
   padding-inline: 27px;
-  padding-block-start: 23px;
-  padding-block-end: 28px;
+  padding-block-start: 26px;
+  padding-block-end: 27px;
 }
 
 .card__text {
@@ -356,11 +356,11 @@
   }
 
   .card__title {
-    padding-block-end: 2px;
+    padding-block-end: 3px;
   }
 
   .card__content {
-    padding-block: 26px;
+    padding-block: 26.7px;
   }
 
   .dialog[open] {
