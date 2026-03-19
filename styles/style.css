@@ -41,6 +41,7 @@
   line-height: 13px;
   background-color: var(--bg-color);
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
   font-variation-settings: "wght" var(--regular-font-weight);
 }
 
@@ -205,6 +206,7 @@
   outline-offset: -2px;
   background-color: var(--bg-color);
   transition: outline-color 0.3s ease;
+  cursor: pointer;
   inline-size: 38px;
   block-size: 38px;
 }
