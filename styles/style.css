@@ -332,7 +332,6 @@
 }
 
 .dialog__info {
-  display: block;
   padding-inline-end: 30px;
   font-family: var(--accent-font-family);
   font-size: 14px;
