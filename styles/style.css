@@ -22,7 +22,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--main-font-weight);
+  font-variation-settings: "wght" var(--regular-font-weight);
 }
 
 .section {
@@ -41,6 +41,7 @@
   line-height: 13px;
   background-color: var(--bg-color);
   transition: box-shadow 0.3s ease;
+  font-variation-settings: "wght" var(--regular-font-weight);
 }
 
 .button::before {
@@ -102,9 +103,9 @@
   padding-inline: 12px;
   padding-block-start: 7px;
   padding-block-end: 1px;
-  font-weight: var(--bold-font-weight);
   font-size: 18px;
   line-height: 122%;
+  font-variation-settings: "wght" var(--bold-font-weight);
 }
 
 .figure {
@@ -153,7 +154,7 @@
   top: 29px;
   right: 27px;
   color: rgba(0, 0, 0, 0.5);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   text-shadow:
     1px 0 var(--text-stroke-color),
@@ -184,9 +185,9 @@
 }
 
 .card__text {
-  font-weight: var(--regular-font-weight);
   font-size: var(--main-font-size);
   line-height: 116%;
+  font-variation-settings: "wght" var(--regular-font-weight);
 }
 
 .card__buttons-group {
@@ -333,7 +334,7 @@
 
 .dialog__info {
   padding-inline-end: 30px;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 150%;
   text-align: start;
